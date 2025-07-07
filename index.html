@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Interactive Kanban Board</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TaskFlow</h1>
+            <p>Organize your tasks with ease</p>
+        </div>
+
+        <div class="task-form">
+            <div class="form-group">
+                <input type="text" id="taskInput" class="task-input" placeholder="Enter a new task..." maxlength="200">
+                <button id="addTaskBtn" class="add-btn">Add Task</button>
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="column todo" data-status="todo">
+                <div class="column-header">
+                    <h3 class="column-title">To Do</h3>
+                    <span class="task-count" id="todoCount">0</span>
+                </div>
+                <div class="tasks-container" id="todoTasks">
+                    <div class="empty-state">No tasks yet. Add one above!</div>
+                </div>
+            </div>
+
+            <div class="column inprogress" data-status="inprogress">
+                <div class="column-header">
+                    <h3 class="column-title">In Progress</h3>
+                    <span class="task-count" id="inprogressCount">0</span>
+                </div>
+                <div class="tasks-container" id="inprogressTasks">
+                    <div class="empty-state">Drag tasks here when you start working on them</div>
+                </div>
+            </div>
+
+            <div class="column done" data-status="done">
+                <div class="column-header">
+                    <h3 class="column-title">Done</h3>
+                    <span class="task-count" id="doneCount">0</span>
+                </div>
+                <div class="tasks-container" id="doneTasks">
+                    <div class="empty-state">Completed tasks will appear here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
